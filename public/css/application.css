@@ -1,0 +1,7 @@
+.container {
+  width: 80%;
+  margin: auto;
+  padding: 0 20px 20px;
+  background: linear-gradient(#33CCCC, #29A3A3, white);
+  background-size: cover;
+}

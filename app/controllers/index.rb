@@ -35,16 +35,31 @@ get '/kinds/:kind_id/:breed_id/new' do
   erb :"kinds/breeds/locations/new"
 end
 
-post '/locations' do
-  @location = Location.find_or_create_by(params[:location])
-  redirect "/kinds/new"
-end
-
-get '/kinds/:kind_id/:breed_id/new' do
+post '/kinds/:kind_id/:breed_id/locations' do
+  @kind = Kind.find(params[:kind_id])
   @breed = Breed.find(params[:breed_id])
-  erb :"kinds/breeds/animals/new"
+  @location = Location.find_or_create_by(params[:location])
+  redirect "/kinds/#{@kind.id}/#{@breed.id}/#{@location.id}/new"
 end
 
+get '/kinds/:kind_id/:breed_id/:location_id/new' do
+  puts @kind = Kind.find(params[:kind_id])
+  @breed = Breed.find(params[:breed_id])
+  @location = Location.find(params[:location_id])
+  erb :"kinds/breeds/locations/animals/new"
+end
+
+post '/kinds/:kind_id/:breed_id/:location_id/animals' do
+  @kind = Kind.find(params[:kind_id])
+  @breed = Breed.find(params[:breed_id])
+  @location = Location.find(params[:location_id])
+  @animal = @breed.animals.find_or_create_by(params[:animal])
+  redirect "/kinds/#{@kind.id}/#{@breed.id}/#{@location.id}/#{@animal.id}/index"
+end
+
+get '/kinds/:kind_id/:breed_id/:location_id/:animal_id/index' do
+  erb :"kinds/breeds/locations/animals/index"
+end
 
 
 

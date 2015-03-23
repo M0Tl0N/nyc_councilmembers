@@ -1,0 +1,9 @@
+<div class="frame">
+  <h2>Welcome, <%= @user.name %>, to Morgan and Sara's Online Store!</h2><br>
+  <h3>Please buy as much as you can! We're poor.</h3><br>
+  <h1>Categories</h1>
+  <br>
+  <% Category.all.each do |category|%>
+  <a href="/category/<%=category.id%>"><h3><%= category.name %></h3></a><br><br>
+  <% end %>
+</div>

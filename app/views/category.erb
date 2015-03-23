@@ -1,0 +1,7 @@
+<div class="frame">
+  <h1><%= @category.name %></h1>
+  <br>
+  <% @category.products.each do |product|%>
+  <a href="/category/<%=@category.id%>/product/<%=product.id%>"><h3><%= product.name %></h3></a><br><br>
+  <% end %>
+</div>

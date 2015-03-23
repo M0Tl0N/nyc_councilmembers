@@ -1,0 +1,14 @@
+<div class="frame">
+  <h1>Your Cart:</h1>
+  <br>
+  <% @order.products.each do |product|%>
+  <h3><%= product.name %>  |  Price: $<%= product.price%></h3><br><br>
+  <% end %>
+  <h3>Your current total is: $<%= @total_price %></h3>
+  <br><br>
+  <a href="/home"><h3>Click here to continue shopping</h3></a><br><br>
+  <a href="/checkout"><h3>Click here to check out</h3></a><br><br>
+  <br>
+  <a href="/logoff"><h3>Log Out</h3></a><br><br>
+
+</div>

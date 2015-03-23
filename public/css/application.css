@@ -1,0 +1,19 @@
+body {
+  background-color: #00004B;
+  color: white;
+  font-family: Arial;
+}
+
+.frame {
+  text-align: center;
+  margin-right: 25em;
+  margin-left: 25em;
+}
+
+a {
+  color: yellow;
+}
+
+label {
+  color: white;
+}

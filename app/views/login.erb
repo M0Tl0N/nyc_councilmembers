@@ -1,0 +1,18 @@
+<div class="frame">
+  <h1>Login</h1>
+  <% if @errors %>
+  <h2 style="color:red"><i>Login failed, try again!</i></h2>
+  <% end %>
+  <form action="/" method="post">
+  <br><br>
+  <font color="black">
+  <label>Email</label>
+  <input type="text" name="email"><br><br>
+  <label>Password</label>
+  <input type="password" name="password"><br><br>
+  <input type="submit" value="Submit">
+  </font>
+  </form>
+  <br><br>
+  <a href="/sign_up">Sign Up</a>
+</div>

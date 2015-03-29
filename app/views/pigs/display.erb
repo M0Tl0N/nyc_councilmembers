@@ -1,0 +1,17 @@
+<h1><%=@pig.name%></h1>
+
+
+<p><b>WEIGHT: </b> <%=@pig.weight%> </p>
+
+<p><b>PAST LIFE: </b> <%=@pig.past_life_identity%> </p>
+
+<form action="/pigs/<%=@pig.id%>/edit" method="get">
+  <input type = "submit" value="edit info">
+</form>
+
+<form action="/pigs/<%=@pig.id%>" method="post">
+  <input type = "hidden" name="_method" value="delete">
+  <input type = "submit" value="delete this pig">
+</form>
+
+

@@ -1,0 +1,16 @@
+<h1> You Can Change the Pig But You Can't Change Your Heart </h1>
+
+<form action="/pigs/<%=@pig.id%>" method="POST">
+  <input type="hidden" name="_method" value="put"><br><br>
+
+  NAME:
+  <input type="text"   name="pig[name]" value="<%=@pig.name%>"><br><br>
+
+  WEIGHT:
+  <input type="text"   name="pig[weight]" value="<%=@pig.weight%>"><br><br>
+
+  PAST LIFE:
+  <textarea   name="pig[past_life_identity]"><%=@pig.past_life_identity%></textarea><br>
+
+    <input type="submit" value="submit changes">
+</form>

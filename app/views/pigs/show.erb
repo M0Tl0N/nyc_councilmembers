@@ -1,0 +1,13 @@
+<h1> You Made It </h1>
+
+<h2> Your pigs... </h2>
+
+<ul>
+  <%@pigs.each do |pig| %>
+<li><a href="/pigs/<%=pig.id%>"><%=pig.name%></a></li>
+<%end%>
+</ul>
+
+<form action='/pigs/new' method = 'get'>
+  <input type="submit" value="add a pig">
+</form>

@@ -1,0 +1,12 @@
+<h1> Pigopolis </h1>
+<h3> A Place For Farmers to Organize Their Pigs </h3>
+
+<%if @error %>
+  <p><%=@error%></p>
+<%end%>
+
+<form action='/login' method='post'>
+  <input type="text" name= "farmer[email]" placeholder= "we won't email you">
+  <input type="password" name="farmer[password]" placeholder="tell us a secret">
+  <input type = "submit" value = "login">
+</form>

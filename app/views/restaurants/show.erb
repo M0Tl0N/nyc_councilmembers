@@ -1,0 +1,13 @@
+<h1><%= @restaurant.name %></h1>
+<h3>Reviews:</h3>
+<% @restaurant.reviews.each do |r| %>
+  <b>User</b> reviewed on <i><%= r.reviewed_on %></i><br><br>
+  <i>Rating: </i><%= r.rating %><br><br>
+  <i>Comments: </i><a href="/reviews/<%=r.id%>"><%= r.comment %></a><br><br>
+<% end %>
+<br><br>
+<a href="/restaurants/<%= @restaurant.id %>/reviews/new">Add Review</a>
+<br><br>
+<a href="/restaurants/<%= @restaurant.id %>/edit">Edit Restaurant</a>
+<br><br><br><br><br>
+<a href="/restaurants">Back to Restaurants</a>

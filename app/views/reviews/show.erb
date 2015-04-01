@@ -1,0 +1,8 @@
+<h1><%= @review.restaurant.name %></h1>
+  <b>User</b> reviewed on <i><%= @review.reviewed_on %></i><br><br>
+  <i>Rating: </i><%= @review.rating %><br><br>
+  <i>Comments: </i><%= @review.comment %><br><br>
+<br><br>
+<a href="/reviews/<%= @review.id %>/edit">Edit Review</a>
+<br><br><br><br><br>
+<a href="/restaurants/<%=@review.restaurant_id%>">Back to Restaurant</a>

@@ -1,0 +1,19 @@
+<h1>Add New Review</h1>
+<form action="/restaurants/<%= @restaurant.id %>/reviews" method="POST">
+  <label>Rating: </label><br>
+  <label>1</label>
+  <input name="rating" type="radio" value="1"/>
+  <label>2</label>
+  <input name="rating" type="radio" value="2"/>
+  <label>3</label>
+  <input name="rating" type="radio" value="3"/>
+  <label>4</label>
+  <input name="rating" type="radio" value="4"/>
+  <label>5</label>
+  <input name="rating" type="radio" value="5"/>
+  <br><br>
+  <label>Comments: </label><br>
+  <textarea rows="5" cols="50" name="comment"></textarea>
+  <br><br><br>
+  <input type="submit" value="Submit" />
+</form>

@@ -1,0 +1,8 @@
+<h1>Restaurants</h1>
+<% @restaurants.each do |r| %>
+  <a href="/restaurants/<%= r.id %>"><%= r.name %></a><br>
+  Reviews: <%= r.reviews.count %><br><br>
+<% end %>
+<br><br>
+<a href="/restaurants/new">Add New Restaurant</a>
+

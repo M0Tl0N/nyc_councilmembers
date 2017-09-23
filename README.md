@@ -1,11 +1,26 @@
 > **Note**: This branch (master) contains a skeleton without any app code, perfect for creating a _new_ application or challenge. If you're looking for an example app built with this skeleton, take a look at the [example](/../..//tree/example) branch which includes basic CRUD and RSpec tests.
 
-### Purpose
+### Purpose 1
+
+Web Scrape With Nokogiri and HTTParty: 
+
+1. Become familiar with the nokogiri and httparty gems. 
+2. Gain experience scraping sites. 
+        site scraped: https://council.nyc.gov/districts/
+        
+3. Learn to create ruby objects from scraped html material. 
+4. Organize new ruby objects in searchable page. 
+
+
+### Purpose 2
+
 The Sinatra Skeleton:
 
 1. Provides a foundation for building challenges or creating a new Sinatra application.
 2. Demonstrates a reasonable set of practices around building Sinatra applications.
 3. Eases the transition to Rails for Dev Bootcamp students
+
+
 
 ### Quickstart
 
@@ -19,12 +34,3 @@ rake generate:migration  # Create an empty migration in db/migrate, e.g., rake g
 rake generate:model      # Create an empty model in app/models, e.g., rake generate:model NAME=User
 ```
 
-### Contributing
-
-We would love for you to help make the skeleton more awesome, There are three ways to contribute:
-
-1. Ask for a bug fix or enhancement!
-2. Submit a pull request for a bug fix or enhancement!
-3. Code review an open pull request!
-
-Be prepared to give and receive specific, actionable, and kind feedback!

@@ -1,4 +1,4 @@
-development: 
+development:
   adapter: postgresql
   database: bucket_dev
   host: localhost

@@ -1,6 +1,5 @@
-require 'HTTParty'
-require 'HTTParty'
-require 'Nokogiri'
+require 'httparty'
+require 'nokogiri'
 
 
 page = HTTParty.get('https://council.nyc.gov/districts/')

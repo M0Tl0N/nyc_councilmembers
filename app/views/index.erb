@@ -1,0 +1,29 @@
+<div class="container" style=" width: 80%; margin: 0 auto;">
+  <h1>Welcome to New York City Council Members!</h1>
+  
+
+<input  id="mySearch" type="search"  name="search" class="light-table-filter" data-table="order-table" placeholder="District | Borough | Member | Neighborhood">
+
+<table id="myTable" class="order-table table" style="width: 80%;" border="1" cellpadding="22">
+<tbody>
+      <tr>
+        <th>district</th>
+        <th>member</th>
+        <th>borough</th>
+        <th>party</th>
+        <th>neighborhoods</th>
+      </tr>
+
+      <% @councilmembers.each do |councilmember| %> 
+    <tr>
+        <td class="MemberId"><%=councilmember.id%></td>
+        <td class="MemberName"><%=councilmember.name%><img class="MemberImage" src="<%=councilmember.image%>"</td>
+        <td class="MemberBorough"><%=councilmember.borough%></td>
+        <td class="MemberParty"><%=councilmember.party%></td>
+        <td class="MemberNeighborhoods"><%=councilmember.neighborhoods%></td>
+    </tr>
+      <%end%>
+
+</tbody>
+</table>
+</div>

@@ -6,21 +6,23 @@
 
 <table id="myTable" class="order-table table" style="width: 80%;" border="1" cellpadding="22">
 <tbody>
-      <tr>
-        <th>district</th>
+  <thead>
+      <tr class="header" style="background-color: #f1f1f1">
+        <th style="padding-left: 10px; padding-right: 10px;">district</th>
         <th>member</th>
         <th>borough</th>
         <th>party</th>
         <th>neighborhoods</th>
       </tr>
+   </thead>
 
       <% @councilmembers.each do |councilmember| %> 
     <tr>
-        <td class="MemberId"><%=councilmember.id%></td>
-        <td class="MemberName"><%=councilmember.name%><img class="MemberImage" src="<%=councilmember.image%>"</td>
-        <td class="MemberBorough"><%=councilmember.borough%></td>
-        <td class="MemberParty"><%=councilmember.party%></td>
-        <td class="MemberNeighborhoods"><%=councilmember.neighborhoods%></td>
+        <td style= "padding-left: 20px; padding-right: 10px;"><%=councilmember.id%></td>
+        <td><div class="name" style="position:absolute; margin-top: 60px;margin-left: 30px;"><%=councilmember.name%></div><img class="member_image" src="<%=councilmember.image%>"</td>
+        <td style= "padding-left: 10px; padding-right: 10px;"><%=councilmember.borough%></td>
+        <td style="padding-left: 10px; padding-right: 10px;"><%=councilmember.party%></td>
+        <td style="padding-left: 10px; padding-right: 10px;"><%=councilmember.neighborhoods%></td>
     </tr>
       <%end%>
 

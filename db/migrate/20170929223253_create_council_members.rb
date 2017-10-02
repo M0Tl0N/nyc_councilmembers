@@ -3,6 +3,7 @@ class CreateCouncilMembers < ActiveRecord::Migration
         create_table :council_members do |t|
             t.string :name
             t.string :image
+            t.string :link
             t.string :borough
             t.string :party
             t.string :neighborhoods

@@ -1,16 +1,15 @@
 <div class="container" style=" width: 80%; margin: 0 auto;">
-  <h1>Welcome to New York City Council Members!</h1>
+  <h1>Participatory Budget: Who's Participating?</h1>
+    <h4 style="width: 80%;">A simple search tool to find your district's councilmember and find out if they hold participatory budget meetings.</h4>
+
+  <p style="width: 80%;">This participatory budget search tool is simple. Type in your district number, neighborhood, or councilmember's name and hover your mouse over the resulting image. Green means they participate, red means they don't. Click on member's names to navigate to their site and find your closest meeting.</p>
   
 
 <input  id="mySearch" type="search"  name="search" class="light-table-filter" data-table="order-table" placeholder="District | Borough | Member | Neighborhood">
 
 <table id="myTable" class="order-table table" style="width: 80%;" border="1" cellpadding="22">
 
-  <div class="tab">
-  <button class="tablinks" >Participating</button>
-  <button class="tablinks">Not Participating</button>
 
-</div>
 <tbody>
   <thead>
       <tr class="header" style="background-color: #f1f1f1">
@@ -27,7 +26,7 @@
       <%if councilmember.participating?%>
         <tr class="participating_row">
         <%else%>
-        <tr>
+        <tr class="non_participating_row">
       <%end%>
         <td style= "padding-left: 20px; padding-right: 10px;"><%=councilmember.id%></td>
         <td><div class="name" style="position:absolute; margin-top: 60px;margin-left: 30px;"><a style="text-decoration: none;" href='<%=councilmember.link%>'><%=councilmember.name%></a></div><img class="member_image" src="<%=councilmember.image%>"></td>

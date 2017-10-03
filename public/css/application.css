@@ -24,13 +24,24 @@
     margin-bottom: 10px;
 }
 
+
+tbody tr.non_participating_row:hover{
+ background-color:#fc9fb4; 
+}
+
 tr.participating_row:hover{
     background-color: #9efd9f;
 
 };
 
-tr:hover{
+tr.non_participating_row {
+    background-color: #fc9fb4;
+}
 
-    background-color: #9efd9f;
-};
+
+
+
+
+
+
 

@@ -7,6 +7,7 @@ class CreateCouncilMembers < ActiveRecord::Migration
             t.string :borough
             t.string :party
             t.string :neighborhoods
+            t.boolean :participating?
         end 
   end
 end

@@ -5,6 +5,12 @@
 <input  id="mySearch" type="search"  name="search" class="light-table-filter" data-table="order-table" placeholder="District | Borough | Member | Neighborhood">
 
 <table id="myTable" class="order-table table" style="width: 80%;" border="1" cellpadding="22">
+
+  <div class="tab">
+  <button class="tablinks" >Participating</button>
+  <button class="tablinks">Not Participating</button>
+
+</div>
 <tbody>
   <thead>
       <tr class="header" style="background-color: #f1f1f1">
@@ -19,7 +25,7 @@
       <% @councilmembers.each do |councilmember| %> 
     <tr>
         <td style= "padding-left: 20px; padding-right: 10px;"><%=councilmember.id%></td>
-        <td><div class="name" style="position:absolute; margin-top: 60px;margin-left: 30px;"><a style="text-decoration: none;" href='<%=councilmember.link%>'><%=councilmember.name%></a></div><img class="member_image" src="<%=councilmember.image%>"><p style="margin-left: 30px;">participating?</p></td>
+        <td><div class="name" style="position:absolute; margin-top: 60px;margin-left: 30px;"><a style="text-decoration: none;" href='<%=councilmember.link%>'><%=councilmember.name%></a></div><img class="member_image" src="<%=councilmember.image%>"></td>
         <td style= "padding-left: 10px; padding-right: 10px;"><%=councilmember.borough%></td>
         <td style="padding-left: 10px; padding-right: 10px;"><%=councilmember.party%></td>
         <td style="padding-left: 10px; padding-right: 10px;"><%=councilmember.neighborhoods%></td>

@@ -23,13 +23,20 @@
    </thead>
 
       <% @councilmembers.each do |councilmember| %> 
-    <tr>
+    
+      <%if councilmember.participating?%>
+        <tr class="participating_row">
+        <%else%>
+        <tr>
+      <%end%>
         <td style= "padding-left: 20px; padding-right: 10px;"><%=councilmember.id%></td>
         <td><div class="name" style="position:absolute; margin-top: 60px;margin-left: 30px;"><a style="text-decoration: none;" href='<%=councilmember.link%>'><%=councilmember.name%></a></div><img class="member_image" src="<%=councilmember.image%>"></td>
         <td style= "padding-left: 10px; padding-right: 10px;"><%=councilmember.borough%></td>
         <td style="padding-left: 10px; padding-right: 10px;"><%=councilmember.party%></td>
         <td style="padding-left: 10px; padding-right: 10px;"><%=councilmember.neighborhoods%></td>
     </tr>
+
+
       <%end%>
 
 </tbody>
